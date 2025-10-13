@@ -1,0 +1,236 @@
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: 0.7s ease;
+}
+
+:root {
+  --header-height: 70px; /* تقدر تغير الرقم لو ارتفاع هيدرك أكبر/أصغر */
+}
+
+/* إجبار الهيدر يأخذ هذا الارتفاع */
+header {
+  height: var(--header-height);
+}
+
+/* نخلي أي سكول عند الانتقال للعناوين ياخد في الاعتبار ارتفاع الهيدر */
+html {
+  scroll-padding-top: calc(var(--header-height) + 10px);
+}
+
+
+
+
+
+
+body {
+  margin: 0;
+  padding-top: 70px;
+}
+.header {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 999;
+
+}
+.logo {
+  width: 100px;
+}
+.header-links a {
+  color: #ffffff;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+.header-links a:hover {
+  background-color: rgb(205, 154, 78);
+  color: rgb(4, 0, 239);
+  border-radius: 15px;
+  animation-duration: all 0.6s;
+}
+
+.btn {
+  background-color: rgb(173, 8, 8);
+  border: none;
+  border-radius: 15px;
+  padding: 5px 15px;
+  color: rgb(255, 255, 255);
+}
+
+.btn:hover {
+  background-color: rgb(205, 154, 78);
+  border-radius: 15px;
+}
+
+.landing-page {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 80px;
+  color: bisque;
+  border-radius: 0 0 50px 50px;
+  max-width: 100%;
+  min-height: 80vh;
+}
+
+.landing-page-left {
+  width: 500px;
+}
+
+.landing-page input {
+  border-radius: 50px;
+  border: none;
+  height: 35px;
+  width: 250px;
+  padding: 0 10px;
+  position: relative;
+  outline: none;
+}
+
+.landing-page button {
+  border-radius: 40px;
+  height: 35px;
+  width: 80px;
+  position: absolute;
+  left: 280px;
+}
+.landing-page img {
+  border-radius: 20px;
+  width: 300px;
+}
+.trending-container {
+  padding: 25px 50px;
+}
+
+.trending-container span {
+  color: rgb(99, 98, 98);
+  font-size: 14px;
+}
+
+.trending-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.trending-header h2 {
+  margin-top: 0;
+}
+
+.trending-cards{
+display: flex;
+gap: 20px;
+ justify-content: space-between;
+}
+.card {
+  width: 300px;
+  background-color: rgb(135, 132, 132);
+  border-radius: 20px;
+}
+.card .thum {
+  border-radius: 20px 20px 0 0;
+  width: 300px;
+  height: 350px;
+}
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+}
+.card-info img {
+  width: 40px;
+  padding: 25px 0 0 0;
+  
+}
+
+.Top-Games{
+  padding: 25px 50px;
+  background-color: rgb(113, 113, 113);
+ border-top-left-radius: 50px;
+border-top-right-radius: 50px;
+justify-content: space-between;
+
+}
+
+
+
+
+
+/* صفحة تسجيل الدخول */
+.signin-container {
+  background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px; /* نفس ارتفاع الهيدر */
+}
+
+.signin-box {
+  background-color: #1a1a1a;
+  padding: 40px 60px;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.signin-box h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: rgb(205, 154, 78);
+}
+
+.signin-box p {
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.signin-box input {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  outline: none;
+  font-size: 16px;
+}
+
+.signin-box input:focus {
+  border: 2px solid rgb(205, 154, 78);
+}
+
+.signin-box .btn {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.signup-text {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-text a {
+  color: rgb(205, 154, 78);
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
