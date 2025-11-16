@@ -4,36 +4,111 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign In | FOX GAMING STORE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background: radial-gradient(circle at top, #0b0c10, #000);
+        color: #f8f9fa;
+      }
+
+      .signin-box {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 2.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .signin-box h2 {
+        color: #ffc107;
+        font-weight: 700;
+      }
+
+      .signin-box p {
+        color: #ccc;
+      }
+
+      .form-control {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        color: #fff;
+      }
+
+      .form-control::placeholder {
+        color: #bbb;
+      }
+
+      .form-control:focus {
+        box-shadow: 0 0 10px #ffc107;
+        outline: none;
+      }
+
+      .btn-warning {
+        background-color: #ffc107;
+        color: #000;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .btn-warning:hover {
+        background-color: #ffca2c;
+        transform: scale(1.03);
+      }
+
+      a.text-warning:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 576px) {
+        .signin-box {
+          padding: 2rem 1.5rem;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <!-- Header ثابت -->
-    <header class="header">
-      <img class="logo" src="imges/logo.png" alt="FOX Logo" />
-      <div class="header-links">
-        <a href="index.html#home">HOME</a>
-        <a href="index.html#trending">Trending</a>
-        <a href="index.html#top">Top Games</a>
-        <a href="signin.html" class="btn">Sign in</a>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-black fixed-top border-bottom border-warning">
+      <div class="container">
+<a class="navbar-brand d-flex align-items-center" href="#home">
+  <img src="imges/logo.png" alt="FOX Logo" style="height:80px; width:auto; margin-right:8px;">
+  <span class="fw-bold text-warning">FOX Gaming Store</span>
+</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#trending">Trending</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#top">Top Games</a></li>
+          </ul>
+        </div>
       </div>
-    </header>
+    </nav>
 
-    <!-- صفحة تسجيل الدخول -->
-    <div class="signin-container">
-      <div class="signin-box">
+    <!-- Sign In Section -->
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+      <div class="signin-box text-center mt-5">
         <h2>Welcome Back!</h2>
         <p>Log in to continue your gaming journey</p>
-        <form action="#" method="post">
-          <input type="email" placeholder="Email Address" required />
-          <input type="password" placeholder="Password" required />
-          <button class="btn" type="submit">Sign In</button>
+        <form>
+          <input type="email" class="form-control mb-3" placeholder="Email Address" required />
+          <input type="password" class="form-control mb-4" placeholder="Password" required />
+          <button type="submit" class="btn btn-warning w-100 mb-3">Sign In</button>
         </form>
-        <p class="signup-text">
+        <p class="mt-3 mb-0 text-light">
           Don’t have an account?
-          <a href="#">Sign up</a>
+          <a href="#" class="text-warning text-decoration-none">Sign up</a>
         </p>
       </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
